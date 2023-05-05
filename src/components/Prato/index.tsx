@@ -1,5 +1,4 @@
-import { Card, Descricao, Titulo, Box } from './styles'
-import star from '../../assets/images/star.png'
+import { Card, Descricao, Titulo, Box, Botao } from './styles'
 type Props = {
   title: string
   description: string
@@ -12,6 +11,7 @@ const Prato = ({ title, description, image }: Props) => (
     <Box>
       <Titulo>{title}</Titulo>
       <Descricao>{description}</Descricao>
+      <Botao>Adicionar ao carrinho</Botao>
     </Box>
   </Card>
 )

@@ -9,9 +9,9 @@ const restaurantes: Restaurante[] = [
     id: 1,
     category: 'Japonesa',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae perspiciatis magni rem omnis accusamus sequi provident exercitationem. Pariatur qui aliquam magni officia amet maxime cumque autem corporis maiores laborum!',
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
     title: 'Hioki Sushi',
-    to: 'ladolcevitatrattoria',
+    to: 'hiokisushi',
     nota: 4.9,
     image: sushi,
     highlight: true
@@ -20,7 +20,7 @@ const restaurantes: Restaurante[] = [
     id: 2,
     category: 'Italiana',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae perspiciatis magni rem omnis accusamus sequi provident exercitationem. Pariatur qui aliquam magni officia amet maxime cumque autem corporis maiores laborum!',
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
     to: 'ladolcevitatrattoria',
     nota: 4.6,
@@ -30,7 +30,7 @@ const restaurantes: Restaurante[] = [
     id: 3,
     category: 'Italiana',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae perspiciatis magni rem omnis accusamus sequi provident exercitationem. Pariatur qui aliquam magni officia amet maxime cumque autem corporis maiores laborum!',
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
     to: 'ladolcevitatrattoria',
     nota: 4.6,
@@ -40,7 +40,7 @@ const restaurantes: Restaurante[] = [
     id: 4,
     category: 'Italiana',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae perspiciatis magni rem omnis accusamus sequi provident exercitationem. Pariatur qui aliquam magni officia amet maxime cumque autem corporis maiores laborum!',
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
     to: 'ladolcevitatrattoria',
     nota: 4.6,
@@ -50,7 +50,7 @@ const restaurantes: Restaurante[] = [
     id: 5,
     category: 'Italiana',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae perspiciatis magni rem omnis accusamus sequi provident exercitationem. Pariatur qui aliquam magni officia amet maxime cumque autem corporis maiores laborum!',
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
     to: 'ladolcevitatrattoria',
     nota: 4.6,
@@ -60,7 +60,7 @@ const restaurantes: Restaurante[] = [
     id: 6,
     category: 'Italiana',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae perspiciatis magni rem omnis accusamus sequi provident exercitationem. Pariatur qui aliquam magni officia amet maxime cumque autem corporis maiores laborum!',
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
     to: 'ladolcevitatrattoria',
     nota: 4.6,

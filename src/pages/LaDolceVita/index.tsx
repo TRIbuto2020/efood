@@ -1,10 +1,54 @@
-import Restaurante from '../../models/restaurante'
+import PratoM from '../../models/prato'
 import HeaderPerfil from '../../components/HeaderPerfil'
 import trattoria from '../../assets/images/trattoria.png'
 import Banner from '../../components/Banner'
-import Prato from '../../components/Prato'
+import pizza from '../../assets/images/pizza.png'
+import Cardapio from '../../components/Cardapio'
 
-const promocoes: Restaurante[] = []
+const cardapio: PratoM[] = [
+  {
+    title: 'Pizza Marguerita',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    image: pizza,
+    id: 1
+  },
+  {
+    title: 'Pizza Marguerita',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    image: pizza,
+    id: 2
+  },
+  {
+    title: 'Pizza Marguerita',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    image: pizza,
+    id: 3
+  },
+  {
+    title: 'Pizza Marguerita',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    image: pizza,
+    id: 4
+  },
+  {
+    title: 'Pizza Marguerita',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    image: pizza,
+    id: 5
+  },
+  {
+    title: 'Pizza Marguerita',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    image: pizza,
+    id: 6
+  }
+]
 
 const LaDolce = () => (
   <>
@@ -14,7 +58,7 @@ const LaDolce = () => (
       name="La Dolce Vita Trattoria"
       category="Italiana"
     />
-    <Prato title="Pizza" description="Pizza uai" image={trattoria} />
+    <Cardapio pratos={cardapio} />
   </>
 )
 

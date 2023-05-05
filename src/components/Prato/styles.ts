@@ -5,7 +5,6 @@ export const Card = styled.div`
   background-color: ${cores.vermelho};
   color: ${cores.bege};
   position: relative;
-  width: 30%;
   padding: 8px;
 
   img {
@@ -18,10 +17,11 @@ export const Box = styled.div`
 `
 
 export const Titulo = styled.h3`
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 900;
+  font-size: 16px;
   display: block;
-  margin-bottom: 8px;
+  margin: 8px 0;
+  letter-spacing: 0.5px;
 `
 
 export const Descricao = styled.p`
@@ -30,4 +30,16 @@ export const Descricao = styled.p`
   display: block;
   margin-top: 16px;
   margin-bottom: 16px;
+`
+
+export const Botao = styled.button`
+  background-color: ${cores.bege};
+  border: none;
+  width: 100%;
+  color: ${cores.vermelho};
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  cursor: pointer;
+  padding: 4px 0;
 `
