@@ -34,4 +34,5 @@ export const Titulo = styled.h2`
 export const Categoria = styled.h3`
   font-size: 32px;
   font-weight: 100;
+  text-transform: capitalize;
 `

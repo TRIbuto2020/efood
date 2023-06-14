@@ -9,6 +9,9 @@ export const Card = styled.div`
 
   img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
   }
 `
 export const Box = styled.div`
@@ -54,4 +57,5 @@ export const Tags = styled.div`
   top: 16px;
   right: 16px;
   gap: 8px;
+  text-transform: capitalize;
 `

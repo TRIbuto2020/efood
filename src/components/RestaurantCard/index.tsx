@@ -21,23 +21,31 @@ const RestaurantCard = ({
   nota,
   image,
   to
-}: Props) => (
-  <Card>
-    <img src={image} alt={title} />
-    <Tags>
-      {highlight && <Tag>Destaque da semana</Tag>}
-      <Tag>{category}</Tag>
-    </Tags>
-    <Box>
-      <Infos>
-        {nota}
-        <img src={star} alt="Estrela" />
-      </Infos>
-      <Titulo>{title}</Titulo>
-      <Descricao>{description}</Descricao>
-      <Button to={to as string}>Saiba mais</Button>
-    </Box>
-  </Card>
-)
+}: Props) => {
+  const getDescricao = (descricao: string) => {
+    if (descricao.length > 270) {
+      return descricao.slice(0, 270) + '...'
+    }
+    return descricao
+  }
+  return (
+    <Card>
+      <img src={image} alt={title} />
+      <Tags>
+        {highlight && <Tag>Destaque da semana</Tag>}
+        <Tag>{category}</Tag>
+      </Tags>
+      <Box>
+        <Infos>
+          {nota}
+          <img src={star} alt="Estrela" />
+        </Infos>
+        <Titulo>{title}</Titulo>
+        <Descricao>{getDescricao(description)}</Descricao>
+        <Button to={to as string}>Saiba mais</Button>
+      </Box>
+    </Card>
+  )
+}
 
 export default RestaurantCard
