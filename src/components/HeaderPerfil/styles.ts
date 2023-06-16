@@ -30,6 +30,10 @@ export const Header = styled.header`
     font-size: 18px;
     font-weight: bold;
   }
+
+  a {
+    cursor: pointer;
+  }
 `
 
 export const Retorno = styled(Link)`
