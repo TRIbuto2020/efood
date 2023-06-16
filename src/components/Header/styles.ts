@@ -31,4 +31,20 @@ export const HeaderDiv = styled.header`
       line-height: 36px;
     }
   }
+
+  a {
+    color: ${cores.bege};
+    background-color: ${cores.vermelho};
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      height: 16px;
+      display: inline;
+      margin-top: 0;
+    }
+  }
 `

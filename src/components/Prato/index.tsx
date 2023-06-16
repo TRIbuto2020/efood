@@ -1,4 +1,6 @@
+import { useDispatch } from 'react-redux'
 import { useState } from 'react'
+
 import { Prato } from '../../pages/Home'
 import fechar from '../../assets/images/fechar.png'
 import {
@@ -12,19 +14,20 @@ import {
   Foto,
   Close
 } from './styles'
+import { add, open } from '../../store/reducers/cart'
 
 interface ModalState extends Prato {
   isVisible: boolean
 }
 
-const formataPreco = (preco = 0) => {
+export const formataPreco = (preco = 0) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL'
   }).format(preco)
 }
 
-const PratoCard = ({ nome, descricao, foto, porcao, preco }: Prato) => {
+const PratoCard = ({ nome, descricao, foto, porcao, preco, id }: Prato) => {
   const getDescricao = (descricao: string) => {
     if (descricao.length > 150) {
       return descricao.slice(0, 150) + '...'
@@ -52,6 +55,22 @@ const PratoCard = ({ nome, descricao, foto, porcao, preco }: Prato) => {
       descricao: '',
       porcao: ''
     })
+  }
+
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(
+      add({
+        id: id,
+        foto: foto,
+        nome: nome,
+        preco: preco,
+        descricao: descricao,
+        porcao: porcao
+      })
+    )
+    dispatch(open())
   }
 
   return (
@@ -90,7 +109,9 @@ const PratoCard = ({ nome, descricao, foto, porcao, preco }: Prato) => {
             <h4>{modal.nome}</h4>
             <p>{modal.descricao}</p>
             <p>Serve: {modal.porcao}</p>
-            <Botao>Adicionar ao carrinho - {formataPreco(preco)}</Botao>
+            <Botao onClick={addToCart}>
+              Adicionar ao carrinho - {formataPreco(preco)}
+            </Botao>
           </div>
         </ModalContent>
         <div className="overlay" onClick={() => closeModal()}></div>
