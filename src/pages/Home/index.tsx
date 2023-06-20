@@ -9,6 +9,7 @@ export type Prato = {
   nome: string
   descricao: string
   porcao: string
+  orderId?: number
 }
 
 export type Restaurante = {

@@ -107,3 +107,51 @@ export const Button = styled.button`
   width: 100%;
   cursor: pointer;
 `
+
+export const Titulo = styled.h4`
+  color: ${cores.bege};
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 16px;
+`
+
+export const Info = styled.div`
+  margin: 8px 0;
+
+  label {
+    font-size: 14px;
+    color: ${cores.bege};
+    font-weight: bold;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    border: none;
+    background-color: ${cores.bege};
+    padding: 8px;
+  }
+
+  small {
+    color: ${cores.bege};
+  }
+`
+
+export const Half = styled.div`
+  display: flex;
+  gap: 10%;
+`
+
+export const Thirds = styled.div`
+  display: grid;
+  grid-template-columns: 60% 30%;
+  gap: 10%;
+`
+
+export const Thanks = styled.p`
+  line-height: 22px;
+  font-size: 14px;
+  color: ${cores.bege};
+  margin-bottom: 24px;
+`
