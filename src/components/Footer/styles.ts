@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Container = styled.footer`
-  background-color: ${cores.bege};
+  background-color: ${colors.beige};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ export const Redes = styled.ul`
   }
 `
 export const Text = styled.p`
-  color: ${cores.vermelho};
+  color: ${colors.red};
   margin-top: 80px;
   margin-bottom: 40px;
   width: 480px;

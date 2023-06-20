@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import bg from '../../assets/images/bg.png'
 
 export const HeaderDiv = styled.header`
   background-image: 'url(${bg})';
   background-size: cover;
-  color: ${cores.vermelho};
+  color: ${colors.red};
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -33,8 +33,8 @@ export const HeaderDiv = styled.header`
   }
 
   a {
-    color: ${cores.bege};
-    background-color: ${cores.vermelho};
+    color: ${colors.beige};
+    background-color: ${colors.red};
     padding: 8px;
     border-radius: 16px;
     display: flex;

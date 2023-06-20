@@ -4,6 +4,7 @@ import HeaderPerfil from '../../components/HeaderPerfil'
 import Banner from '../../components/Banner'
 import Cardapio from '../../components/Cardapio'
 import { useGetPratosQuery } from '../../services/api'
+import Loader from '../../components/Loader'
 
 const RestaurantePg = () => {
   const { id } = useParams()
@@ -11,7 +12,7 @@ const RestaurantePg = () => {
   const { data: restaurante } = useGetPratosQuery(id!)
 
   if (!restaurante) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   return (

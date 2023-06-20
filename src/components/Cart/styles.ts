@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import lixeira from '../../assets/images/lixeira.svg'
 
 export const Overlay = styled.div`
@@ -28,7 +28,7 @@ export const CartContainer = styled.div`
 `
 
 export const Sidebar = styled.aside`
-  background-color: ${cores.vermelho};
+  background-color: ${colors.red};
   z-index: 1;
   padding: 32px 8px 0px 8px;
   max-width: 360px;
@@ -38,7 +38,7 @@ export const Sidebar = styled.aside`
 export const Prices = styled.div`
   font-weight: bold;
   font-size: 14px;
-  color: ${cores.bege};
+  color: ${colors.beige};
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
@@ -46,7 +46,7 @@ export const Prices = styled.div`
   span {
     display: block;
     font-size: 12px;
-    color: ${cores.bege};
+    color: ${colors.beige};
   }
 `
 
@@ -54,7 +54,7 @@ export const CartItem = styled.li`
   display: flex;
   padding: 8px;
   position: relative;
-  background-color: ${cores.bege};
+  background-color: ${colors.beige};
   margin-bottom: 16px;
 
   img {
@@ -67,14 +67,14 @@ export const CartItem = styled.li`
   h3 {
     font-size: 18px;
     font-weight: bolder;
-    color: ${cores.vermelho};
+    color: ${colors.red};
   }
 
   span {
     display: block;
     font-size: 14px;
     font-weight: normal;
-    color: ${cores.vermelho};
+    color: ${colors.red};
     margin-top: 16px;
   }
 
@@ -91,15 +91,15 @@ export const CartItem = styled.li`
   }
 `
 
-export const Vazio = styled.h3`
-  color: ${cores.bege};
+export const Empty = styled.h3`
+  color: ${colors.beige};
   font-size: 24px;
   text-align: center;
 `
 
 export const Button = styled.button`
-  background-color: ${cores.bege};
-  color: ${cores.vermelho};
+  background-color: ${colors.beige};
+  color: ${colors.red};
   font-weight: bold;
   border: none;
   padding: 4px;
@@ -109,7 +109,7 @@ export const Button = styled.button`
 `
 
 export const Titulo = styled.h4`
-  color: ${cores.bege};
+  color: ${colors.beige};
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 16px;
@@ -120,7 +120,7 @@ export const Info = styled.div`
 
   label {
     font-size: 14px;
-    color: ${cores.bege};
+    color: ${colors.beige};
     font-weight: bold;
   }
 
@@ -129,12 +129,12 @@ export const Info = styled.div`
     width: 100%;
     margin-top: 8px;
     border: none;
-    background-color: ${cores.bege};
+    background-color: ${colors.beige};
     padding: 8px;
   }
 
   small {
-    color: ${cores.bege};
+    color: ${colors.beige};
   }
 `
 
@@ -152,6 +152,6 @@ export const Thirds = styled.div`
 export const Thanks = styled.p`
   line-height: 22px;
   font-size: 14px;
-  color: ${cores.bege};
+  color: ${colors.beige};
   margin-bottom: 24px;
 `

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Header = styled.header`
-  color: ${cores.vermelho};
+  color: ${colors.red};
   padding: 64px 0;
 
   .container {
@@ -39,5 +39,5 @@ export const Header = styled.header`
 export const Retorno = styled(Link)`
   font-size: 18px;
   font-weight: bold;
-  color: ${cores.vermelho};
+  color: ${colors.red};
 `

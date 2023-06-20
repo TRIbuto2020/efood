@@ -1,5 +1,4 @@
 import PratoCard from '../Prato'
-import { Prato } from '../../pages/Home'
 import { Container, List } from './styles'
 
 export type Props = {

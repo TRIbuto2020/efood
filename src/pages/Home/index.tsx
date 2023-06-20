@@ -1,27 +1,7 @@
 import Restaurants from '../../components/Restaurants'
 import Header from '../../components/Header'
 import { useGetRestaurantsQuery } from '../../services/api'
-
-export type Prato = {
-  id: number
-  foto: string
-  preco: number
-  nome: string
-  descricao: string
-  porcao: string
-  orderId?: number
-}
-
-export type Restaurante = {
-  id: number
-  titulo: string
-  destacado: boolean
-  tipo: string
-  avaliacao: number
-  descricao: string
-  capa: string
-  cardapio: Prato[]
-}
+import Loader from '../../components/Loader'
 
 const Home = () => {
   const { data } = useGetRestaurantsQuery()
@@ -34,7 +14,7 @@ const Home = () => {
       </>
     )
   } else {
-    return <h4>Carregando...</h4>
+    return <Loader />
   }
 }
 

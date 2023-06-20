@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 
-import { Prato } from '../../pages/Home'
 import fechar from '../../assets/images/fechar.png'
 import {
   Card,
@@ -15,16 +14,10 @@ import {
   Close
 } from './styles'
 import { add, open } from '../../store/reducers/cart'
+import { parseToBrl } from '../../utils'
 
 interface ModalState extends Prato {
   isVisible: boolean
-}
-
-export const formataPreco = (preco = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(preco)
 }
 
 const PratoCard = ({ nome, descricao, foto, porcao, preco, id }: Prato) => {
@@ -110,7 +103,7 @@ const PratoCard = ({ nome, descricao, foto, porcao, preco, id }: Prato) => {
             <p>{modal.descricao}</p>
             <p>Serve: {modal.porcao}</p>
             <Botao onClick={addToCart}>
-              Adicionar ao carrinho - {formataPreco(preco)}
+              Adicionar ao carrinho - {parseToBrl(preco)}
             </Botao>
           </div>
         </ModalContent>

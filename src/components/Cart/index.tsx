@@ -10,7 +10,7 @@ import {
   Prices,
   Sidebar,
   Button,
-  Vazio,
+  Empty,
   Titulo,
   Info,
   Half,
@@ -26,8 +26,9 @@ import {
   remove,
   reset
 } from '../../store/reducers/cart'
-import { formataPreco } from '../Prato'
+import { parseToBrl } from '../../utils'
 import { Product, usePurchaseMutation } from '../../services/api'
+import Loader from '../Loader'
 
 const Cart = () => {
   const { isOpen, items, order } = useSelector(
@@ -127,9 +128,9 @@ const Cart = () => {
     initialValues: {
       nome: '',
       numCart: 0,
-      cvv: 0,
-      mes: 0,
-      ano: 0
+      cvv: 555,
+      mes: 1,
+      ano: 2025
     },
     validationSchema: Yup.object({
       nome: Yup.string()
@@ -191,7 +192,7 @@ const Cart = () => {
           <>
             {items.length === 0 && (
               <div>
-                <Vazio>Seu carrinho está vazio...</Vazio>
+                <Empty>Seu carrinho está vazio...</Empty>
               </div>
             )}
             <ul>
@@ -200,12 +201,12 @@ const Cart = () => {
                   <img src={item.foto} alt="" />
                   <div>
                     <h3>{item.nome}</h3>
-                    <span>{formataPreco(item.preco)}</span>
+                    <span>{parseToBrl(item.preco)}</span>
                   </div>
                   <button
                     type="button"
                     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                    onClick={() => removeItem(item.orderId!)}
+                    onClick={() => removeItem(item.inCartId!)}
                   />
                 </CartItem>
               ))}
@@ -214,7 +215,7 @@ const Cart = () => {
               <>
                 <Prices>
                   <p>Valor total</p>
-                  <p>{formataPreco(getTotalPrice())} </p>
+                  <p>{parseToBrl(getTotalPrice())} </p>
                 </Prices>
                 <Button onClick={defOrder}>Continuar com a entrega</Button>
               </>
@@ -316,7 +317,7 @@ const Cart = () => {
           <>
             <form onSubmit={formPag.handleSubmit}>
               <Titulo>
-                Pagamento - Valor a pagar {formataPreco(getTotalPrice())}
+                Pagamento - Valor a pagar {parseToBrl(getTotalPrice())}
               </Titulo>
               <Info>
                 <label htmlFor="nome">Nome no cartão</label>
@@ -426,6 +427,7 @@ const Cart = () => {
                 <Button onClick={finish}>Concluir</Button>
               </>
             )}
+            {isLoading && <Loader />}
           </>
         )}
       </Sidebar>

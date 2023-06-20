@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Card = styled.div`
-  background-color: ${cores.vermelho};
-  color: ${cores.bege};
+  background-color: ${colors.red};
+  color: ${colors.beige};
   position: relative;
   padding: 8px;
 
@@ -35,10 +35,10 @@ export const Descricao = styled.p`
 `
 
 export const Botao = styled.button`
-  background-color: ${cores.bege};
+  background-color: ${colors.beige};
   border: none;
   width: 100%;
-  color: ${cores.vermelho};
+  color: ${colors.red};
   font-size: 14px;
   font-weight: bold;
   line-height: 16px;
@@ -75,7 +75,7 @@ export const ModalContent = styled.div`
   max-width: 1024px;
   position: relative;
   z-index: 1;
-  background-color: ${cores.vermelho};
+  background-color: ${colors.red};
   display: flex;
   position: relative;
   @media (max-width: ${breakpoints.tablet}) {

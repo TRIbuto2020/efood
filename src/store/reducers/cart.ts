@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Prato } from '../../pages/Home'
+
 import {
   PurchasePayload,
   Product,
@@ -57,7 +57,7 @@ const cartSlice = createSlice({
           descricao: action.payload.descricao,
           porcao: action.payload.porcao,
           foto: action.payload.foto,
-          orderId: action.payload.id
+          inCartId: action.payload.id
         })
       } else {
         const plus = Math.floor(Math.random() * 10000)
@@ -68,7 +68,7 @@ const cartSlice = createSlice({
           descricao: action.payload.descricao,
           porcao: action.payload.porcao,
           foto: action.payload.foto,
-          orderId: action.payload.id + plus + 100
+          inCartId: action.payload.id + plus + 100
         })
       }
     },
@@ -80,7 +80,7 @@ const cartSlice = createSlice({
     },
     remove: (state, action: PayloadAction<number>) => {
       state.items = state.items.filter(
-        (item) => item.orderId !== action.payload
+        (item) => item.inCartId !== action.payload
       )
     },
     reset: (state) => {
