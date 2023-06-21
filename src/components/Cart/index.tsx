@@ -3,6 +3,21 @@ import { useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
+import { RootReducer } from '../../store'
+
+import {
+  close,
+  delivery,
+  getPratos,
+  payment,
+  remove,
+  reset
+} from '../../store/reducers/cart'
+
+import { parseToBrl } from '../../utils'
+import { Product, usePurchaseMutation } from '../../services/api'
+import Loader from '../Loader'
+
 import {
   CartContainer,
   CartItem,
@@ -17,18 +32,6 @@ import {
   Thirds,
   Thanks
 } from './styles'
-import { RootReducer } from '../../store'
-import {
-  close,
-  delivery,
-  getPratos,
-  payment,
-  remove,
-  reset
-} from '../../store/reducers/cart'
-import { parseToBrl } from '../../utils'
-import { Product, usePurchaseMutation } from '../../services/api'
-import Loader from '../Loader'
 
 const Cart = () => {
   const { isOpen, items, order } = useSelector(
@@ -36,8 +39,7 @@ const Cart = () => {
   )
   const [cartStage, setCartStage] = useState(0)
 
-  const [purchase, { isLoading, isError, data, isSuccess }] =
-    usePurchaseMutation()
+  const [purchase, { isLoading, data, isSuccess }] = usePurchaseMutation()
 
   const dispatch = useDispatch()
 
@@ -403,7 +405,7 @@ const Cart = () => {
 
         {cartStage === 3 && (
           <>
-            {isSuccess && (
+            {isSuccess && data && (
               <>
                 <Titulo>Pedido realizado - {data.orderId}</Titulo>
                 <Thanks>
